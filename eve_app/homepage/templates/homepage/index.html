@@ -1,0 +1,31 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+
+       <div class="alert alert-warning" role="alert">
+          <b>1 order</b> requires your immediate attention. Please <a href="/order">click here</a>.
+        </div>
+
+<div class="row g-5">
+    <div class="col-md-6">
+        <img src="{% static 'homepage/photo1.jpg' %}" style="width: 100%;" alt="YAAAAS DOGE TO THE MOOON!" />
+    </div>
+
+    <div class="col-md-6">
+        <h1>We know you love your EV </h1>
+        <h2>But does she love you back?</h2>
+    </div>
+</div>
+<div class="row g-5" style="margin-top: 3rem;">
+
+    <div class="col-md-6">
+        <h1>A day not plugged in</h1>
+        <h2>Is a day wasted on making progress</h2>
+    </div>
+    <div class="col-md-6">
+        <img src="{% static 'homepage/photo2.jpg' %}" style="width: 100%;" alt="Hi hi I'm not used to plugging it in" />
+    </div>
+</div>
+
+{% endblock %}

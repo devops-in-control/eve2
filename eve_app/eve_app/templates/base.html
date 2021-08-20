@@ -1,0 +1,67 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.87.0">
+    <title>EVE - EV Evolution (TM)</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/starter-template/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .logo {
+          height: 3rem;
+      }
+      .business-name {
+          padding-left: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    </head>
+  <body>
+    
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <img src="{% static 'eve_app/logo.png' %}" class="logo" alt="EVE all up in your business">
+        <span class="fs-4 business-name">EV Evolution</span>
+    </a>
+  </header>
+
+  <main>
+        {% block content %}{% endblock %}
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by lazyjoker.net &middot; &copy; 2021
+  </footer>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+         {% block script %}{% endblock %}
+   
+      
+  </body>
+</html>
+
+
+
+
