@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'eve_app.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
     
     from django.core.management.commands.runserver import Command as runserver
     runserver.default_port = "8080"
