@@ -9,6 +9,3 @@ This is the EV Evolution website.
 - Python 3 and up
 - Django 3 and up
 
-## Release notes
-
-- Added new shiny button
