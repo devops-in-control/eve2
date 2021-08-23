@@ -1,24 +1,39 @@
 *** Settings ***
-Documentation     Test suite for charger request page
+Documentation   Test suite for charger request page
 ...
-...               This test has a workflow that is created using keywords in
-...               the imported resource file.
-Library           SeleniumLibrary
-Library      XvfbRobot
+...             This test has a workflow that is created using keywords in
+...             the imported resource file.
+Library         SeleniumLibrary
+Library         Process
+Library         DjangoLibrary  ${HOSTNAME}  ${PORT}  path=/opt/robotframework/eve2  manage=eve2/manage.py  settings=core.settings
+Suite Setup     Start Django and open Browser
+Suite Teardown  Stop Django and close Browser
+
+# Library      XvfbRobot
 
 
 
 *** Variables ***
-${SERVER}         localhost:8080
-${BROWSER}        Firefox
-${DELAY}          0
+${HOSTNAME}         localhost
+${PORT}             8080
+${SERVER}           http://${HOSTNAME}:${PORT}
+${BROWSER}          %{BROWSER}
+${DELAY}            0
 ${VALID PHONE NUMBER}     0612345678
 ${INVALID PHONE NUMBER}    061234567a
-${REQUEST URL}    http://${SERVER}/order/
-${SUCCESS URL}    http://${SERVER}/order/
+${REQUEST URL}    ${SERVER}/order/
+${SUCCESS URL}    ${SERVER}/order/
 ${ERROR MESSAGE}    Please enter a valid phone number for shipping updates.
 
 *** Keywords ***
+Start Django and open Browser
+  Start Django
+  Open Browser  ${SERVER}  ${BROWSER}
+
+Stop Django and close browser
+  Close Browser
+  Stop Django
+
 Open Browser To Request Page
     Open Browser    ${REQUEST URL}    ${BROWSER}
     Maximize Browser Window

@@ -51,6 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # the middlewares below are for robot framework and should ideally only be added in test
+    # 'DjangoLibrary.middleware.AutologinAuthenticationMiddleware',
+    'DjangoLibrary.middleware.FactoryBoyMiddleware',
+    'DjangoLibrary.middleware.QuerySetMiddleware',
 ]
 
 ROOT_URLCONF = 'core.urls'
