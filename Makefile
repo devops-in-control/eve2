@@ -3,6 +3,9 @@ datetime := $(shell date +"%Y%m%dT%H%M%S")
 report_dir := $(cwd)/e2e/reports/$(datetime)
 tests_dir := $(cwd)/e2e
 
+run:
+	python3 manage.py runserver 8080
+
 
 test-unit:
 	python3 manage.py test
