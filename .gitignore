@@ -177,4 +177,7 @@ cython_debug/
 .history
 .ionide
 
+
+uat/reports/
+
 # End of https://www.toptal.com/developers/gitignore/api/python,cloud9,git,visualstudiocode
