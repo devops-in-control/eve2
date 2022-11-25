@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-r9jr^^y_5s_e11-8^m+sbe$%(9ja((0mjig6mume-qj3tvu%ks
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['860325ded2da4c53b0197e7136da0840.vfs.cloud9.eu-central-1.amazonaws.com', 'localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = ['24a166708b0e45efa84109f144f209ce.vfs.cloud9.eu-central-1.amazonaws.com', 'localhost', '127.0.0.1', '0.0.0.0']
 
 X_FRAME_OPTIONS = 'ALLOW-FROM https://eu-central-1.console.aws.amazon.com/'
 
